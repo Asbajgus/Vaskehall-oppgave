@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="counter"></div> 
+   <div id="costCounter"></div>
+   <div id="childCounter"></div>
+   <div id="adultcounter"></div>
+   <script>
+  let maxLimit = 100;
+
+let childCount = Math.floor(Math.random() * (maxLimit + 1));
+let adultCount = Math.floor(Math.random() * (maxLimit- childCount + 1));
+
+let childCost=150;
+let adultCost=350;
+
+let totalCost = childCount * childCost + adultCount * adultCost;
+
+
+let number = childCount + adultCount;
+document.getElementById('counter').innerHTML 
+=`Children: ${childCount} Adults: ${adultCount} Total: ${number}`;
+
+document.getElementById('costCounter').innerHTML= `${totalCost} KR`;
+
+   </script>
+</body>
+</html>
